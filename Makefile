@@ -21,6 +21,7 @@ var/app.json: var/policies.js
 	set -o pipefail && node bin/extract-app.js | jq --sort-keys . > $@.tmp && mv $@.tmp $@
 
 var/policies.js:
+	mkdir -p var
 	curl -o $@.tmp https://awsiamconsole.s3.amazonaws.com/iam/assets/js/bundles/policies.js && mv $@.tmp $@
 
 update:
