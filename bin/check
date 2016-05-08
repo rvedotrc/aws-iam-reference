@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eu
+
+cd "$( dirname "$0" )"
+
+if perl -e 'exit 0 if stat("../all-actions.txt") and -f(_) and -M(_) < 7; exit 1' ; then
+	exit 0
+else
+	echo Please run $PWD/update-and-commit
+fi

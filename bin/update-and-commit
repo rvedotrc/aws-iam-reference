@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -eu
+
+cd "$( dirname "$0" )"/..
+
+git pull
+
+echo Updating all-actions.txt ...
+make update
+
+git add policies.js app.json all-actions.txt
+
+if ! git diff --exit-code > /dev/null ; then
+	git commit . -m "Automatic commit of updated actions"
+fi
+
+git push
