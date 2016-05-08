@@ -6,10 +6,10 @@ cd "$( dirname "$0" )"/..
 
 git pull
 
-echo Updating all-actions.txt ...
+echo Updating ...
 make update
 
-git add policies.js app.json all-actions.txt
+git add all-actions.txt
 
 if ! git diff --exit-code > /dev/null ; then
 	git commit . -m "Automatic commit of updated actions"
