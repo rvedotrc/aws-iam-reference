@@ -392,6 +392,16 @@ directconnect:DescribeInterconnects
 directconnect:DescribeLocations
 directconnect:DescribeVirtualGateways
 directconnect:DescribeVirtualInterfaces
+discovery:CreateTags
+discovery:DeleteTags
+discovery:DescribeAgents
+discovery:DescribeConfigurations
+discovery:DescribeExportConfigurations
+discovery:DescribeTags
+discovery:ExportConfigurations
+discovery:ListConfigurations
+discovery:StartDataCollectionByAgentIds
+discovery:StopDataCollectionByAgentIds
 dms:CreateEndpoint
 dms:CreateReplicationInstance
 dms:CreateReplicationSubnetGroup
