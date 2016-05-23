@@ -464,7 +464,6 @@ dynamodb:Scan
 dynamodb:UpdateItem
 dynamodb:UpdateTable
 ec2:AcceptVpcPeeringConnection
-ec2:ActivateLicense
 ec2:AllocateAddress
 ec2:AssignPrivateIpAddresses
 ec2:AssociateAddress
@@ -516,7 +515,6 @@ ec2:CreateVpcPeeringConnection
 ec2:CreateVpnConnection
 ec2:CreateVpnConnectionRoute
 ec2:CreateVpnGateway
-ec2:DeactivateLicense
 ec2:DeleteCustomerGateway
 ec2:DeleteDhcpOptions
 ec2:DeleteFlowLogs
@@ -562,7 +560,6 @@ ec2:DescribeInstanceStatus
 ec2:DescribeInstances
 ec2:DescribeInternetGateways
 ec2:DescribeKeyPairs
-ec2:DescribeLicenses
 ec2:DescribeMovingAddresses
 ec2:DescribeNatGateways
 ec2:DescribeNetworkAcls
@@ -1622,6 +1619,9 @@ s3:PutLifecycleConfiguration
 s3:PutObject
 s3:PutObjectAcl
 s3:PutObjectVersionAcl
+s3:PutReplicationConfiguration
+s3:ReplicateDelete
+s3:ReplicateObject
 s3:RestoreObject
 sdb:BatchDeleteAttributes
 sdb:BatchPutAttributes
