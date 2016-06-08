@@ -402,6 +402,7 @@ discovery:ExportConfigurations
 discovery:ListConfigurations
 discovery:StartDataCollectionByAgentIds
 discovery:StopDataCollectionByAgentIds
+dms:AddTagsToResource
 dms:CreateEndpoint
 dms:CreateReplicationInstance
 dms:CreateReplicationSubnetGroup
@@ -421,10 +422,12 @@ dms:DescribeReplicationSubnetGroups
 dms:DescribeReplicationTasks
 dms:DescribeSchemas
 dms:DescribeTableStatistics
+dms:ListTagsForResource
 dms:ModifyEndpoint
 dms:ModifyReplicationInstance
 dms:ModifyReplicationSubnetGroup
 dms:RefreshSchemas
+dms:RemoveTagsFromResource
 dms:StartReplicationTask
 dms:StopReplicationTask
 dms:TestConnection
