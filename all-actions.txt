@@ -182,11 +182,15 @@ cloudsearch:UpdateServiceAccessPolicies
 cloudsearch:document
 cloudsearch:search
 cloudsearch:suggest
+cloudtrail:AddTags
 cloudtrail:CreateTrail
 cloudtrail:DeleteTrail
 cloudtrail:DescribeTrails
 cloudtrail:GetTrailStatus
+cloudtrail:ListPublicKeys
+cloudtrail:ListTags
 cloudtrail:LookupEvents
+cloudtrail:RemoveTags
 cloudtrail:StartLogging
 cloudtrail:StopLogging
 cloudtrail:UpdateTrail
@@ -1010,6 +1014,7 @@ iam:GetSAMLProvider
 iam:GetSSHPublicKey
 iam:GetServerCertificate
 iam:GetServiceLastAccessedDetails
+iam:GetServiceLastAccessedDetailsWithEntities
 iam:GetUser
 iam:GetUserPolicy
 iam:ListAccessKeys
@@ -1026,6 +1031,7 @@ iam:ListInstanceProfilesForRole
 iam:ListMFADevices
 iam:ListOpenIDConnectProviders
 iam:ListPolicies
+iam:ListPoliciesGrantingServiceAccess
 iam:ListPolicyVersions
 iam:ListRolePolicies
 iam:ListRoles
@@ -1717,6 +1723,7 @@ sqs:RemovePermission
 sqs:SendMessage
 sqs:SendMessageBatch
 sqs:SetQueueAttributes
+ssm:CancelCommand
 ssm:CreateAssociation
 ssm:CreateAssociationBatch
 ssm:CreateDocument
@@ -1724,9 +1731,15 @@ ssm:DeleteAssociation
 ssm:DeleteDocument
 ssm:DescribeAssociation
 ssm:DescribeDocument
+ssm:DescribeDocumentPermission
+ssm:DescribeInstanceInformation
 ssm:GetDocument
 ssm:ListAssociations
+ssm:ListCommandInvocations
+ssm:ListCommands
 ssm:ListDocuments
+ssm:ModifyDocumentPermission
+ssm:SendCommand
 ssm:UpdateAssociationStatus
 storagegateway:ActivateGateway
 storagegateway:AddCache
