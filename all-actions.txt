@@ -1171,6 +1171,7 @@ kinesis:PutRecord
 kinesis:PutRecords
 kinesis:RemoveTagsFromStream
 kinesis:SplitShard
+kms:CancelKeyDeletion
 kms:CreateAlias
 kms:CreateGrant
 kms:CreateKey
@@ -1191,10 +1192,13 @@ kms:ListAliases
 kms:ListGrants
 kms:ListKeyPolicies
 kms:ListKeys
+kms:ListRetirableGrants
 kms:PutKeyPolicy
 kms:ReEncrypt*
-kms:RetireGrant
+kms:ReEncryptFrom
+kms:ReEncryptTo
 kms:RevokeGrant
+kms:ScheduleKeyDeletion
 kms:UpdateAlias
 kms:UpdateKeyDescription
 lambda:AddPermission
@@ -1246,6 +1250,7 @@ logs:PutMetricFilter
 logs:PutRetentionPolicy
 logs:PutSubscriptionFilter
 logs:TestMetricFilter
+machinelearning:AddTags
 machinelearning:CreateBatchPrediction
 machinelearning:CreateDataSourceFromRDS
 machinelearning:CreateDataSourceFromRedshift
@@ -1258,10 +1263,12 @@ machinelearning:DeleteDataSource
 machinelearning:DeleteEvaluation
 machinelearning:DeleteMLModel
 machinelearning:DeleteRealtimeEndpoint
+machinelearning:DeleteTags
 machinelearning:DescribeBatchPredictions
 machinelearning:DescribeDataSources
 machinelearning:DescribeEvaluations
 machinelearning:DescribeMLModels
+machinelearning:DescribeTags
 machinelearning:GetBatchPrediction
 machinelearning:GetDataSource
 machinelearning:GetEvaluation
