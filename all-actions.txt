@@ -11,6 +11,13 @@ apigateway:OPTIONS
 apigateway:PATCH
 apigateway:POST
 apigateway:PUT
+application-autoscaling:DeleteScalingPolicy
+application-autoscaling:DeregisterScalableTarget
+application-autoscaling:DescribeScalableTargets
+application-autoscaling:DescribeScalingActivities
+application-autoscaling:DescribeScalingPolicies
+application-autoscaling:PutScalingPolicy
+application-autoscaling:RegisterScalableTarget
 appstream:CreateApplication
 appstream:CreateSession
 appstream:DeleteApplication
@@ -308,7 +315,9 @@ cognito-sync:SubscribeToDataset
 cognito-sync:UnsubscribeFromDataset
 cognito-sync:UpdateRecords
 config:DeleteConfigRule
+config:DeleteConfigurationRecorder
 config:DeleteDeliveryChannel
+config:DeleteEvaluationResults
 config:DeliverConfigSnapshot
 config:DescribeComplianceByConfigRule
 config:DescribeComplianceByResource
@@ -330,6 +339,7 @@ config:PutConfigRule
 config:PutConfigurationRecorder
 config:PutDeliveryChannel
 config:PutEvaluations
+config:StartConfigRulesEvaluation
 config:StartConfigurationRecorder
 config:StopConfigurationRecorder
 datapipeline:ActivatePipeline
@@ -472,6 +482,7 @@ dynamodb:UpdateItem
 dynamodb:UpdateTable
 ec2:AcceptVpcPeeringConnection
 ec2:AllocateAddress
+ec2:AllocateHosts
 ec2:AssignPrivateIpAddresses
 ec2:AssociateAddress
 ec2:AssociateDhcpOptions
@@ -558,6 +569,8 @@ ec2:DescribeDhcpOptions
 ec2:DescribeExportTasks
 ec2:DescribeFlowLogs
 ec2:DescribeHosts
+ec2:DescribeIdFormat
+ec2:DescribeIdentityIdFormat
 ec2:DescribeImageAttribute
 ec2:DescribeImages
 ec2:DescribeImportImageTasks
@@ -600,6 +613,7 @@ ec2:DescribeVolumeStatus
 ec2:DescribeVolumes
 ec2:DescribeVpcAttribute
 ec2:DescribeVpcClassicLink
+ec2:DescribeVpcClassicLinkDnsSupport
 ec2:DescribeVpcEndpointServices
 ec2:DescribeVpcEndpoints
 ec2:DescribeVpcPeeringConnections
@@ -613,12 +627,15 @@ ec2:DetachVolume
 ec2:DetachVpnGateway
 ec2:DisableVgwRoutePropagation
 ec2:DisableVpcClassicLink
+ec2:DisableVpcClassicLinkDnsSupport
 ec2:DisassociateAddress
 ec2:DisassociateRouteTable
 ec2:EnableVgwRoutePropagation
 ec2:EnableVolumeIO
 ec2:EnableVpcClassicLink
+ec2:EnableVpcClassicLinkDnsSupport
 ec2:GetConsoleOutput
+ec2:GetConsoleScreenshot
 ec2:GetPasswordData
 ec2:ImportImage
 ec2:ImportInstance
@@ -627,6 +644,7 @@ ec2:ImportSnapshot
 ec2:ImportVolume
 ec2:ModifyHosts
 ec2:ModifyIdFormat
+ec2:ModifyIdentityIdFormat
 ec2:ModifyImageAttribute
 ec2:ModifyInstanceAttribute
 ec2:ModifyInstancePlacement
@@ -642,6 +660,7 @@ ec2:ModifyVpcPeeringConnectionOptions
 ec2:MonitorInstances
 ec2:MoveAddressToVpc
 ec2:PurchaseReservedInstancesOffering
+ec2:PurchaseScheduledInstances
 ec2:RebootInstances
 ec2:RegisterImage
 ec2:RejectVpcPeeringConnection
@@ -663,6 +682,7 @@ ec2:RestoreAddressToClassic
 ec2:RevokeSecurityGroupEgress
 ec2:RevokeSecurityGroupIngress
 ec2:RunInstances
+ec2:RunScheduledInstances
 ec2:StartInstances
 ec2:StopInstances
 ec2:TerminateInstances
@@ -678,7 +698,6 @@ ecr:DeleteRepositoryPolicy
 ecr:DescribeRepositories
 ecr:GetAuthorizationToken
 ecr:GetDownloadUrlForLayer
-ecr:GetManifest
 ecr:GetRepositoryPolicy
 ecr:InitiateLayerUpload
 ecr:ListImages
@@ -1335,6 +1354,7 @@ mobilehub:ListProjects
 mobilehub:UpdateProject
 mobilehub:ValidateProject
 mobilehub:VerifyServiceRole
+opsworks:AssignInstance
 opsworks:AssignVolume
 opsworks:AssociateElasticIp
 opsworks:AttachElasticLoadBalancer
@@ -1350,11 +1370,14 @@ opsworks:DeleteInstance
 opsworks:DeleteLayer
 opsworks:DeleteStack
 opsworks:DeleteUserProfile
+opsworks:DeregisterEcsCluster
 opsworks:DeregisterElasticIp
+opsworks:DeregisterInstance
 opsworks:DeregisterVolume
 opsworks:DescribeApps
 opsworks:DescribeCommands
 opsworks:DescribeDeployments
+opsworks:DescribeEcsClusters
 opsworks:DescribeElasticIps
 opsworks:DescribeElasticLoadBalancers
 opsworks:DescribeInstances
@@ -1364,6 +1387,8 @@ opsworks:DescribePermissions
 opsworks:DescribeRaidArrays
 opsworks:DescribeRdsDbInstances
 opsworks:DescribeServiceErrors
+opsworks:DescribeStackProvisioningParameters
+opsworks:DescribeStackSummary
 opsworks:DescribeStacks
 opsworks:DescribeTimeBasedAutoScaling
 opsworks:DescribeUserProfiles
@@ -1371,8 +1396,12 @@ opsworks:DescribeVolumes
 opsworks:DetachElasticLoadBalancer
 opsworks:DisassociateElasticIp
 opsworks:GetHostnameSuggestion
+opsworks:GrantAccess
 opsworks:RebootInstance
+opsworks:RegisterEcsCluster
 opsworks:RegisterElasticIp
+opsworks:RegisterInstance
+opsworks:RegisterRdsDbInstance
 opsworks:RegisterVolume
 opsworks:SetLoadBasedAutoScaling
 opsworks:SetPermission
@@ -1381,11 +1410,14 @@ opsworks:StartInstance
 opsworks:StartStack
 opsworks:StopInstance
 opsworks:StopStack
+opsworks:UnassignInstance
 opsworks:UnassignVolume
 opsworks:UpdateApp
 opsworks:UpdateElasticIp
 opsworks:UpdateInstance
 opsworks:UpdateLayer
+opsworks:UpdateMyUserProfile
+opsworks:UpdateRdsDbInstance
 opsworks:UpdateStack
 opsworks:UpdateUserProfile
 opsworks:UpdateVolume
