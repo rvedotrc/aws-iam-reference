@@ -1,7 +1,10 @@
+acm:AddTagsToCertificate
 acm:DeleteCertificate
 acm:DescribeCertificate
 acm:GetCertificate
 acm:ListCertificates
+acm:ListTagsForCertificate
+acm:RemoveTagsFromCertificate
 acm:RequestCertificate
 acm:ResendValidationEmail
 apigateway:DELETE
@@ -357,7 +360,7 @@ datapipeline:PollForTask
 datapipeline:PutAccountLimits
 datapipeline:PutPipelineDefinition
 datapipeline:QueryObjects
-datapipeline:RemoteTags
+datapipeline:RemoveTags
 datapipeline:ReportTaskProgress
 datapipeline:ReportTaskRunnerHeartbeat
 datapipeline:SetStatus
@@ -465,6 +468,7 @@ dynamodb:BatchWriteItem
 dynamodb:CreateTable
 dynamodb:DeleteItem
 dynamodb:DeleteTable
+dynamodb:DescribeLimits
 dynamodb:DescribeReservedCapacity
 dynamodb:DescribeReservedCapacityOfferings
 dynamodb:DescribeStream
@@ -568,6 +572,8 @@ ec2:DescribeCustomerGateways
 ec2:DescribeDhcpOptions
 ec2:DescribeExportTasks
 ec2:DescribeFlowLogs
+ec2:DescribeHostReservationOfferings
+ec2:DescribeHostReservations
 ec2:DescribeHosts
 ec2:DescribeIdFormat
 ec2:DescribeIdentityIdFormat
@@ -636,6 +642,7 @@ ec2:EnableVpcClassicLink
 ec2:EnableVpcClassicLinkDnsSupport
 ec2:GetConsoleOutput
 ec2:GetConsoleScreenshot
+ec2:GetHostReservationPurchasePreview
 ec2:GetPasswordData
 ec2:ImportImage
 ec2:ImportInstance
@@ -652,6 +659,7 @@ ec2:ModifyNetworkInterfaceAttribute
 ec2:ModifyReservedInstances
 ec2:ModifySnapshotAttribute
 ec2:ModifySpotFleetRequest
+ec2:ModifySpotFleetRequest
 ec2:ModifySubnetAttribute
 ec2:ModifyVolumeAttribute
 ec2:ModifyVpcAttribute
@@ -659,6 +667,7 @@ ec2:ModifyVpcEndpoint
 ec2:ModifyVpcPeeringConnectionOptions
 ec2:MonitorInstances
 ec2:MoveAddressToVpc
+ec2:PurchaseHostReservation
 ec2:PurchaseReservedInstancesOffering
 ec2:PurchaseScheduledInstances
 ec2:RebootInstances
@@ -1231,6 +1240,7 @@ kms:CreateGrant
 kms:CreateKey
 kms:Decrypt
 kms:DeleteAlias
+kms:DeleteImportedKeyMaterial
 kms:DescribeKey
 kms:DisableKey
 kms:DisableKeyRotation
@@ -1242,6 +1252,8 @@ kms:GenerateDataKeyWithoutPlaintext
 kms:GenerateRandom
 kms:GetKeyPolicy
 kms:GetKeyRotationStatus
+kms:GetParametersForImport
+kms:ImportKeyMaterial
 kms:ListAliases
 kms:ListGrants
 kms:ListKeyPolicies
