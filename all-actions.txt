@@ -233,7 +233,10 @@ codecommit:UpdateDefaultBranch
 codecommit:UpdateRepositoryDescription
 codecommit:UpdateRepositoryName
 codedeploy:AddTagsToOnPremisesInstances
+codedeploy:BatchGetApplicationRevisions
 codedeploy:BatchGetApplications
+codedeploy:BatchGetDeploymentGroups
+codedeploy:BatchGetDeploymentInstances
 codedeploy:BatchGetDeployments
 codedeploy:BatchGetOnPremisesInstances
 codedeploy:CreateApplication
@@ -272,6 +275,7 @@ codepipeline:DeleteCustomActionType
 codepipeline:DeletePipeline
 codepipeline:DisableStageTransition
 codepipeline:EnableStageTransition
+codepipeline:GetJobDetails
 codepipeline:GetPipeline
 codepipeline:GetPipelineState
 codepipeline:GetThirdPartyJobDetails
@@ -280,10 +284,12 @@ codepipeline:ListPipelines
 codepipeline:PollForJobs
 codepipeline:PollForThirdPartyJobs
 codepipeline:PutActionRevision
+codepipeline:PutApprovalResult
 codepipeline:PutJobFailureResult
 codepipeline:PutJobSuccessResult
 codepipeline:PutThirdPartyJobFailureResult
 codepipeline:PutThirdPartyJobSuccessResult
+codepipeline:RetryStageExecution
 codepipeline:StartPipelineExecution
 codepipeline:UpdatePipeline
 cognito-identity:CreateIdentityPool
