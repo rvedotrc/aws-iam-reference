@@ -13,6 +13,6 @@ git add all-actions.txt
 
 if ! git diff --cached --exit-code > /dev/null ; then
 	git commit -m "Automatic commit of updated actions"
+	git push
+	git diff HEAD^..HEAD
 fi
-
-git push
