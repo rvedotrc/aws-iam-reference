@@ -534,7 +534,6 @@ ec2:CancelExportTask
 ec2:CancelImportTask
 ec2:CancelReservedInstancesListing
 ec2:CancelSpotFleetRequests
-ec2:CancelSpotFleetRequests
 ec2:CancelSpotInstanceRequests
 ec2:ConfirmProductInstance
 ec2:CopyImage
@@ -633,10 +632,7 @@ ec2:DescribeSnapshotAttribute
 ec2:DescribeSnapshots
 ec2:DescribeSpotDatafeedSubscription
 ec2:DescribeSpotFleetInstances
-ec2:DescribeSpotFleetInstances
 ec2:DescribeSpotFleetRequestHistory
-ec2:DescribeSpotFleetRequestHistory
-ec2:DescribeSpotFleetRequests
 ec2:DescribeSpotFleetRequests
 ec2:DescribeSpotInstanceRequests
 ec2:DescribeSpotPriceHistory
@@ -689,7 +685,6 @@ ec2:ModifyNetworkInterfaceAttribute
 ec2:ModifyReservedInstances
 ec2:ModifySnapshotAttribute
 ec2:ModifySpotFleetRequest
-ec2:ModifySpotFleetRequest
 ec2:ModifySubnetAttribute
 ec2:ModifyVolumeAttribute
 ec2:ModifyVpcAttribute
@@ -710,7 +705,6 @@ ec2:ReplaceNetworkAclEntry
 ec2:ReplaceRoute
 ec2:ReplaceRouteTableAssociation
 ec2:ReportInstanceStatus
-ec2:RequestSpotFleet
 ec2:RequestSpotFleet
 ec2:RequestSpotInstances
 ec2:ResetImageAttribute
