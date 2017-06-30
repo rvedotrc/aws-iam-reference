@@ -14,11 +14,8 @@
 
 .PHONY: update
 
-all-actions.txt: var/app.json bin/all-actions
-	./bin/all-actions > $@.tmp && mv $@.tmp $@
-
-var/app.json: var/policies.js
-	set -o pipefail && node bin/extract-app.js | jq --sort-keys . > $@.tmp && mv $@.tmp $@
+all-actions.txt: var/policies.js bin/extract-app.js
+	node bin/extract-app.js > $@.tmp && mv $@.tmp $@
 
 var/policies.js:
 	mkdir -p var
