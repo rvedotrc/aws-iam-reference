@@ -23,11 +23,14 @@ application-autoscaling:DescribeScalingPolicies
 application-autoscaling:PutScalingPolicy
 application-autoscaling:RegisterScalableTarget
 appstream:AssociateFleet
+appstream:CreateDirectoryConfig
 appstream:CreateFleet
 appstream:CreateStack
 appstream:CreateStreamingURL
+appstream:DeleteDirectoryConfig
 appstream:DeleteFleet
 appstream:DeleteStack
+appstream:DescribeDirectoryConfigs
 appstream:DescribeFleets
 appstream:DescribeImages
 appstream:DescribeSessions
@@ -38,6 +41,7 @@ appstream:ListAssociatedFleets
 appstream:ListAssociatedStacks
 appstream:StartFleet
 appstream:StopFleet
+appstream:UpdateDirectoryConfig
 appstream:UpdateFleet
 appstream:UpdateStack
 athena:BatchGetNamedQuery
@@ -786,6 +790,7 @@ ec2:CreateNatGateway
 ec2:CreateNetworkAcl
 ec2:CreateNetworkAclEntry
 ec2:CreateNetworkInterface
+ec2:CreateNetworkInterfacePermission
 ec2:CreatePlacementGroup
 ec2:CreateReservedInstancesListing
 ec2:CreateRoute
@@ -1585,6 +1590,7 @@ lambda:CreateFunction
 lambda:DeleteAlias
 lambda:DeleteEventSourceMapping
 lambda:DeleteFunction
+lambda:EnableReplication
 lambda:GetAccountSettings
 lambda:GetAlias
 lambda:GetEventSourceMapping
@@ -1596,9 +1602,12 @@ lambda:InvokeFunction
 lambda:ListAliases
 lambda:ListEventSourceMappings
 lambda:ListFunctions
+lambda:ListTags
 lambda:ListVersionsByFunction
 lambda:PublishVersion
 lambda:RemovePermission
+lambda:TagResource
+lambda:UntagResource
 lambda:UpdateAlias
 lambda:UpdateEventSourceMapping
 lambda:UpdateFunctionCode
@@ -1811,11 +1820,18 @@ mobileanalytics:PutEvents
 mobilehub:CreateProject
 mobilehub:CreateServiceRole
 mobilehub:DeleteProject
+mobilehub:DescribeBundle
+mobilehub:ExportBundle
+mobilehub:ExportProject
 mobilehub:GenerateProjectParameters
 mobilehub:GetProject
+mobilehub:GetProjectSnapshot
+mobilehub:ListAvailableConnectors
 mobilehub:ListAvailableFeatures
 mobilehub:ListAvailableRegions
+mobilehub:ListBundles
 mobilehub:ListProjects
+mobilehub:SynchronizeProject
 mobilehub:UpdateProject
 mobilehub:ValidateProject
 mobilehub:VerifyServiceRole
@@ -2448,7 +2464,6 @@ ssm:DeregisterTargetFromMaintenanceWindow
 ssm:DeregisterTaskFromMaintenanceWindow
 ssm:DescribeActivations
 ssm:DescribeAssociation
-ssm:DescribeAutomationActions
 ssm:DescribeAutomationExecutions
 ssm:DescribeAvailablePatches
 ssm:DescribeDocument
@@ -2470,6 +2485,7 @@ ssm:DescribeParameters
 ssm:DescribePatchBaselines
 ssm:DescribePatchGroupState
 ssm:DescribePatchGroups
+ssm:GetAutomationExecution
 ssm:GetCommandInvocation
 ssm:GetDefaultPatchBaseline
 ssm:GetDeployablePatchSnapshotForInstance
@@ -2501,6 +2517,8 @@ ssm:RegisterTaskWithMaintenanceWindow
 ssm:RemoveTagsFromResource
 ssm:SendCommand
 ssm:StartAssociationsOnce
+ssm:StartAutomationExecution
+ssm:StopAutomationExecution
 ssm:UpdateAssociation
 ssm:UpdateAssociationStatus
 ssm:UpdateDocument
@@ -2533,6 +2551,7 @@ storagegateway:AddWorkingStorage
 storagegateway:CancelArchival
 storagegateway:CancelRetrieval
 storagegateway:CreateCachediSCSIVolume
+storagegateway:CreateNFSFileShare
 storagegateway:CreateSnapshot
 storagegateway:CreateSnapshotFromVolumeRecoveryPoint
 storagegateway:CreateStorediSCSIVolume
@@ -2540,6 +2559,7 @@ storagegateway:CreateTapeWithBarcode
 storagegateway:CreateTapes
 storagegateway:DeleteBandwidthRateLimit
 storagegateway:DeleteChapCredentials
+storagegateway:DeleteFileShare
 storagegateway:DeleteGateway
 storagegateway:DeleteSnapshotSchedule
 storagegateway:DeleteTape
@@ -2551,6 +2571,7 @@ storagegateway:DescribeCachediSCSIVolumes
 storagegateway:DescribeChapCredentials
 storagegateway:DescribeGatewayInformation
 storagegateway:DescribeMaintenanceStartTime
+storagegateway:DescribeNFSFileShares
 storagegateway:DescribeSnapshotSchedule
 storagegateway:DescribeStorediSCSIVolumes
 storagegateway:DescribeTapeArchives
@@ -2560,12 +2581,14 @@ storagegateway:DescribeUploadBuffer
 storagegateway:DescribeVTLDevices
 storagegateway:DescribeWorkingStorage
 storagegateway:DisableGateway
+storagegateway:ListFileShares
 storagegateway:ListGateways
 storagegateway:ListLocalDisks
 storagegateway:ListTagsForResource
 storagegateway:ListTapes
 storagegateway:ListVolumeRecoveryPoints
 storagegateway:ListVolumes
+storagegateway:RefreshCache
 storagegateway:RetrieveTapeArchive
 storagegateway:RetrieveTapeRecoveryPoint
 storagegateway:SetLocalConsolePassword
@@ -2576,6 +2599,7 @@ storagegateway:UpdateChapCredentials
 storagegateway:UpdateGatewayInformation
 storagegateway:UpdateGatewaySoftwareNow
 storagegateway:UpdateMaintenanceStartTime
+storagegateway:UpdateNFSFileShare
 storagegateway:UpdateSnapshotSchedule
 sts:AssumeRole
 sts:AssumeRoleWithSAML
@@ -2644,6 +2668,7 @@ trustedadvisor:UpdateNotificationPreferences
 waf-regional:AssociateWebACL
 waf-regional:CreateByteMatchSet
 waf-regional:CreateIPSet
+waf-regional:CreateRateBasedRule
 waf-regional:CreateRule
 waf-regional:CreateSizeConstraintSet
 waf-regional:CreateSqlInjectionMatchSet
@@ -2651,6 +2676,7 @@ waf-regional:CreateWebACL
 waf-regional:CreateXssMatchSet
 waf-regional:DeleteByteMatchSet
 waf-regional:DeleteIPSet
+waf-regional:DeleteRateBasedRule
 waf-regional:DeleteRule
 waf-regional:DeleteSizeConstraintSet
 waf-regional:DeleteSqlInjectionMatchSet
@@ -2661,6 +2687,8 @@ waf-regional:GetByteMatchSet
 waf-regional:GetChangeToken
 waf-regional:GetChangeTokenStatus
 waf-regional:GetIPSet
+waf-regional:GetRateBasedRule
+waf-regional:GetRateBasedRuleManagedKeys
 waf-regional:GetRule
 waf-regional:GetSampledRequests
 waf-regional:GetSizeConstraintSet
@@ -2670,6 +2698,7 @@ waf-regional:GetWebACLForResource
 waf-regional:GetXssMatchSet
 waf-regional:ListByteMatchSets
 waf-regional:ListIPSets
+waf-regional:ListRateBasedules
 waf-regional:ListResourcesForWebACL
 waf-regional:ListRules
 waf-regional:ListSizeConstraintSets
@@ -2678,6 +2707,7 @@ waf-regional:ListWebACLs
 waf-regional:ListXssMatchSets
 waf-regional:UpdateByteMatchSet
 waf-regional:UpdateIPSet
+waf-regional:UpdateRateBasedRule
 waf-regional:UpdateRule
 waf-regional:UpdateSizeConstraintSet
 waf-regional:UpdateSqlInjectionMatchSet
@@ -2685,6 +2715,7 @@ waf-regional:UpdateWebACL
 waf-regional:UpdateXssMatchSet
 waf:CreateByteMatchSet
 waf:CreateIPSet
+waf:CreateRateBasedRule
 waf:CreateRule
 waf:CreateSizeConstraintSet
 waf:CreateSqlInjectionMatchSet
@@ -2692,6 +2723,7 @@ waf:CreateWebACL
 waf:CreateXssMatchSet
 waf:DeleteByteMatchSet
 waf:DeleteIPSet
+waf:DeleteRateBasedRule
 waf:DeleteRule
 waf:DeleteSizeConstraintSet
 waf:DeleteSqlInjectionMatchSet
@@ -2701,6 +2733,8 @@ waf:GetByteMatchSet
 waf:GetChangeToken
 waf:GetChangeTokenStatus
 waf:GetIPSet
+waf:GetRateBasedRule
+waf:GetRateBasedRuleManagedKeys
 waf:GetRule
 waf:GetSampledRequests
 waf:GetSizeConstraintSet
@@ -2709,6 +2743,7 @@ waf:GetWebACL
 waf:GetXssMatchSet
 waf:ListByteMatchSets
 waf:ListIPSets
+waf:ListRateBasedules
 waf:ListRules
 waf:ListSizeConstraintSets
 waf:ListSqlInjectionMatchSets
@@ -2716,6 +2751,7 @@ waf:ListWebACLs
 waf:ListXssMatchSets
 waf:UpdateByteMatchSet
 waf:UpdateIPSet
+waf:UpdateRateBasedRule
 waf:UpdateRule
 waf:UpdateSizeConstraintSet
 waf:UpdateSqlInjectionMatchSet
