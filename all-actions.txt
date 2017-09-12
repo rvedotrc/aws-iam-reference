@@ -2495,6 +2495,7 @@ ssm:GetInventorySchema
 ssm:GetMaintenanceWindow
 ssm:GetMaintenanceWindowExecution
 ssm:GetMaintenanceWindowExecutionTask
+ssm:GetManifest
 ssm:GetParameterHistory
 ssm:GetParameters
 ssm:GetPatchBaseline
