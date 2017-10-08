@@ -755,6 +755,7 @@ ec2:AcceptReservedInstancesExchangeQuote
 ec2:AcceptVpcPeeringConnection
 ec2:AllocateAddress
 ec2:AllocateHosts
+ec2:AssignIpv6Addresses
 ec2:AssignPrivateIpAddresses
 ec2:AssociateAddress
 ec2:AssociateDhcpOptions
@@ -840,13 +841,14 @@ ec2:DescribeClassicLinkInstances
 ec2:DescribeConversionTasks
 ec2:DescribeCustomerGateways
 ec2:DescribeDhcpOptions
+ec2:DescribeEgressOnlyInternetGateways
 ec2:DescribeExportTasks
 ec2:DescribeFlowLogs
 ec2:DescribeFpgaImages
 ec2:DescribeHostReservationOfferings
 ec2:DescribeHostReservations
 ec2:DescribeHosts
-ec2:DescribeIamInstanceProfileAssociation
+ec2:DescribeIamInstanceProfileAssociations
 ec2:DescribeIdFormat
 ec2:DescribeIdentityIdFormat
 ec2:DescribeImageAttribute
@@ -907,6 +909,8 @@ ec2:DisableVpcClassicLinkDnsSupport
 ec2:DisassociateAddress
 ec2:DisassociateIamInstanceProfile
 ec2:DisassociateRouteTable
+ec2:DisassociateSubnetCidrBlock
+ec2:DisassociateVpcCidrBlock
 ec2:EnableVgwRoutePropagation
 ec2:EnableVolumeIO
 ec2:EnableVpcClassicLink
@@ -969,6 +973,8 @@ ec2:StopInstances
 ec2:TerminateInstances
 ec2:UnassignPrivateIpAddresses
 ec2:UnmonitorInstances
+ec2:UpdateSecurityGroupRuleDescriptionsEgress
+ec2:UpdateSecurityGroupRuleDescriptionsIngress
 ecr:BatchCheckLayerAvailability
 ecr:BatchDeleteImage
 ecr:BatchGetImage
@@ -2496,8 +2502,10 @@ ssm:GetMaintenanceWindow
 ssm:GetMaintenanceWindowExecution
 ssm:GetMaintenanceWindowExecutionTask
 ssm:GetManifest
+ssm:GetParameter
 ssm:GetParameterHistory
 ssm:GetParameters
+ssm:GetParametersByPath
 ssm:GetPatchBaseline
 ssm:GetPatchBaselineForPatchGroup
 ssm:ListAssociations
