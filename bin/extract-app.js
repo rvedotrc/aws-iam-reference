@@ -19,4 +19,20 @@ _ = {
   extend: function () { },
 };
 require('../var/policies.js');
-console.log(JSON.stringify(app));
+let allActions = [];
+let services = app["PolicyEditorConfig"]["serviceMap"];
+
+for (let service in services) {
+    let details = services[service];
+
+    if (!details.Actions) {
+        continue;
+    }
+
+    details.Actions.map(a => {
+        allActions.push(`${details.StringPrefix}:${a}`)
+    });
+}
+
+allActions.sort();
+allActions.map(a => console.log(a));
