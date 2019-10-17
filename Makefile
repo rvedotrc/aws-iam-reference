@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+SHELL=/bin/bash
+
 .PHONY: update
 
 all-actions.txt: var/app.json bin/all-actions
@@ -22,7 +24,7 @@ var/app.json: var/policies.js
 
 var/policies.js:
 	mkdir -p var
-	curl -o $@.tmp https://awsiamconsole.s3.amazonaws.com/iam/assets/js/bundles/policies.js && mv $@.tmp $@
+	curl -o $@.tmp https://awspolicygen.s3.amazonaws.com/js/policies.js && mv $@.tmp $@
 
 update:
 	rm -f var/policies.js
